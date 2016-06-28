@@ -1,3 +1,4 @@
+## Recuerden realizar el fork del Branch(Rama) Master y crear un branch(rama) con su nombre y apellido para que sea mas sencillo calificarlos.
 # Segunda práctica calificada del Curso Web Developer .NET
 En la presente se deberan de abordar los tópicos cubiertos en las sesiones de referidas al modulo 2: **Creando Aplicaciones ASP.NET MVC 5** y el módulo 3: **Aplicando Técnicas en una Aplicación ASP.NET MVC 5.**
 
