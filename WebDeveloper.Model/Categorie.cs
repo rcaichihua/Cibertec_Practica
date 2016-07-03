@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebDeveloper.Model
 {
-    public partial class Categories
+    public partial class Categorie
     {
         
-        public Categories()
+        public Categorie()
         {
-            Products = new HashSet<Products>();
+            Products = new HashSet<Product>();
         }
 
         [Key]
@@ -27,6 +27,6 @@ namespace WebDeveloper.Model
         public byte[] Picture { get; set; }
 
         
-        public virtual ICollection<Products> Products { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

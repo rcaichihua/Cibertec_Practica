@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebDeveloper.Model
 {
-    public partial class Customers
+    public partial class Customer
     {
         
-        public Customers()
+        public Customer()
         {
-            Orders = new HashSet<Orders>();
+            Order = new HashSet<Order>();
         }
 
         [Key]
@@ -49,6 +49,6 @@ namespace WebDeveloper.Model
         public string Fax { get; set; }
 
         
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

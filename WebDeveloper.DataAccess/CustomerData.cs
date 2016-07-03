@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebDeveloper.DataAccess
 {
-    public class Class1
+    class CustomerData
     {
     }
 }

@@ -6,13 +6,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace WebDeveloper.Model
 {
 
-    public partial class Employees
+    public partial class Employee
     {
         
-        public Employees()
+        public Employee()
         {
-            Employees1 = new HashSet<Employees>();
-            Orders = new HashSet<Orders>();
+            Employees1 = new HashSet<Employee>();
+            Orders = new HashSet<Order>();
         }
 
         [Key]
@@ -69,11 +69,10 @@ namespace WebDeveloper.Model
         public string PhotoPath { get; set; }
 
         
-        public virtual ICollection<Employees> Employees1 { get; set; }
+        public virtual ICollection<Employee> Employee1 { get; set; }
 
-        public virtual Employees Employees2 { get; set; }
-
+        public virtual Employee Employee2 { get; set; }
         
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

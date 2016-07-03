@@ -15,11 +15,11 @@ namespace WebDeveloper.DataAccess
         {
             //Database.SetInitializer(new WebDeveloperInitializer());
         }
-        public DbSet<Categories> categories { get; set; }
-        public DbSet<Customers> customers { get; set; }
-        public DbSet<Employees> employees { get; set; }
-        public DbSet<Orders> orders { get; set; }
-        public DbSet<Products> products { get; set; }
+        public DbSet<Categorie> categorie { get; set; }
+        public DbSet<Customer> customer { get; set; }
+        public DbSet<Employee> employee { get; set; }
+        public DbSet<Order> order { get; set; }
+        public DbSet<Product> product { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
