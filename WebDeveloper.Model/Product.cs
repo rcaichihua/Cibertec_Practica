@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebDeveloper.Model
 {
-    public partial class Products
+    public partial class Product
     {
         [Key]
         public int ProductID { get; set; }
@@ -32,6 +32,6 @@ namespace WebDeveloper.Model
 
         public bool Discontinued { get; set; }
 
-        public virtual Categories Categories { get; set; }
+        public virtual Categorie Categorie { get; set; }
     }
 }

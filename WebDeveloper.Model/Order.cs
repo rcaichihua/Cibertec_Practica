@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace WebDeveloper.Model
 {
 
-    public partial class Orders
+    public partial class Order
     {
         [Key]
         public int OrderID { get; set; }
@@ -45,8 +45,8 @@ namespace WebDeveloper.Model
         [StringLength(15)]
         public string ShipCountry { get; set; }
 
-        public virtual Customers Customers { get; set; }
+        public virtual Customer Customer { get; set; }
 
-        public virtual Employees Employees { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }
