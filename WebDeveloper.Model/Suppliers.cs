@@ -5,33 +5,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebDeveloper.Model
 {
-    public partial class Customer
+    public partial class Supplier
     {
-        
-        public Customer()
+        public Supplier()
         {
-            Order = new HashSet<Order>();
+            Product = new HashSet<Product>();
         }
 
         [Key]
-        public int CustomerID { get; set; }
+        public int SupplierID { get; set; }
 
-        [Required(ErrorMessage = "This field is required")]
-        [StringLength(40,ErrorMessage = "The Company Name field must be a string with a maximum length of 40.")]
-        [Display(Name = "Company Name")]
+        [Required]
+        [StringLength(40, ErrorMessage = "The Company Name field must be a string with a maximum length of 40.")]
         public string CompanyName { get; set; }
 
-        [Required(ErrorMessage = "This field is required")]
         [StringLength(30, ErrorMessage = "The Contact Name field must be a string with a maximum length of 30.")]
-        [Display(Name = "Contact Name")]
         public string ContactName { get; set; }
 
-        [Required(ErrorMessage = "This field is required")]
         [StringLength(30, ErrorMessage = "The Contact Title field must be a string with a maximum length of 30.")]
-        [Display(Name = "Contact Title")]
         public string ContactTitle { get; set; }
 
-        [Required(ErrorMessage = "This field is required")]
         [StringLength(60, ErrorMessage = "The Address field must be a string with a maximum length of 60.")]
         public string Address { get; set; }
 
@@ -42,7 +35,6 @@ namespace WebDeveloper.Model
         public string Region { get; set; }
 
         [StringLength(10, ErrorMessage = "The Postal Code field must be a string with a maximum length of 10.")]
-        [Display(Name = "Postal Code")]
         public string PostalCode { get; set; }
 
         [StringLength(15, ErrorMessage = "The Country field must be a string with a maximum length of 15.")]
@@ -50,10 +42,12 @@ namespace WebDeveloper.Model
 
         [StringLength(24, ErrorMessage = "The Phone field must be a string with a maximum length of 24.")]
         public string Phone { get; set; }
-
         [StringLength(24, ErrorMessage = "The Fax field must be a string with a maximum length of 24.")]
         public string Fax { get; set; }
-     
-        public virtual ICollection<Order> Order { get; set; }
+
+        [Column(TypeName = "ntext")]
+        public string HomePage { get; set; }
+
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

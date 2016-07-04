@@ -7,13 +7,13 @@ using WebDeveloper.Model;
 
 namespace WebDeveloper.DataAccess
 {
-    public class CategorieData :BaseDataAccess<Categorie>
+    public class SupplierData : BaseDataAccess<Supplier>
     {
-        public Categorie GetCategorie(int? id)
+        public Supplier GetSupplier(int? id)
         {
             using (var dbContext = new WebContextDb())
             {
-                return dbContext.categorie.FirstOrDefault(x => x.CategoryID == id);
+                return dbContext.supplier.FirstOrDefault(x => x.SupplierID == id);
             }
         }
     }
